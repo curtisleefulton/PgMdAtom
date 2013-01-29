@@ -1,11 +1,11 @@
 SYNOPSIS
 
-docs at https://pagemeld.com/PgMdAtom/PgMdAtom.html
+docs at https://pagemeld.com/PgMdAtom
 
 ```
-#import "PgMdAtomParserDefaultImpl.h"
+#import "PgMdAtom.h"
 
-id<PgMdAtomParser> atomParser = [[PgMdAtomParserDefaultImpl alloc]init];
+id<PgMdAtomParser> atomParser = [PgMdAtom getParser];
 
 NSString *locale = @"en_US";
 NSData *xml = [@"<feed/>" dataUsingEncoding:NSUTF8StringEncoding];
