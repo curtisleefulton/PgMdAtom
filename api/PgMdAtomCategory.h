@@ -8,12 +8,24 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ * Atom category model properties.
+ */
 @interface PgMdAtomCategory : NSObject
 
+/**
+ *  identifies the categorization scheme via a URI
+ */
 @property NSURL *scheme;
 
+/**
+ * provides a human-readable label for display
+ */
 @property NSString *label;
 
+/**
+ * required property that identifies the category
+ */
 @property NSString *term;
 
 @end

@@ -8,9 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ * Identifies the software used to generate the feed, for debugging and other purposes.
+ */
 @interface PgMdAtomGenerator : NSObject
 
+/**
+ * optional
+ */
 @property NSURL *uri;
+
+/**
+ * optional
+ */
 @property NSString *version;
 
 @end

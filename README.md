@@ -1,5 +1,7 @@
 SYNOPSIS
 
+docs at https://pagemeld.com/PgMdAtom/PgMdAtom.html
+
 ```
 #import "PgMdAtomParserDefaultImpl.h"
 

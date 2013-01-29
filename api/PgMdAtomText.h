@@ -8,12 +8,24 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ * Contain human-readable text, usually in small quantities. 
+ */
 @interface PgMdAtomText : NSObject
 
+/**
+ * Determines how PgMdAtomText is encoded (default="text"). If type="text", then this element contains plain text with no entity escaped html. If type="html", then this element contains entity escaped html. If type="xhtml", then this element contains inline xhtml, wrapped in a div element.
+ */
 @property NSString *type;
 
+/**
+ * text representation
+ */
 @property NSString *text;
 
+/**
+ * markup representation
+ */
 @property NSString *markup;
 
 

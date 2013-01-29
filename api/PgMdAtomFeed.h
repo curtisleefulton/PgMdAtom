@@ -8,8 +8,14 @@
 
 #import "PgMdAtomSource.h"
 
+/**
+ * Atom feed. A Feed consists of some metadata, followed by any number of entries.
+ */
 @interface PgMdAtomFeed : PgMdAtomSource
 
+/**
+ * feed may have any number of entries
+ */
 @property NSArray *entries;
 
 @end

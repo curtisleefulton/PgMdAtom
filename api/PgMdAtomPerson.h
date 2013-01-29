@@ -8,10 +8,24 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ * Describe a person, corporation, or similar entity.
+ */
 @interface PgMdAtomPerson : NSObject
 
+/**
+ * conveys a human-readable name for the person. Required.
+ */
 @property NSString *name;
+
+/**
+ * contains an email address for the person
+ */
 @property NSString *email;
+
+/**
+ * contains a home page for the person
+ */
 @property NSURL *uri;
 
 @end
