@@ -21,7 +21,7 @@
 @property NSURL *atomId;
 
 /**
- * PgMdAtomPerson array. Names one author of the feed or entry. A feed or entry may have multiple author elements. A feed must contain at least one author element unless all of the entry elements contain at least one author element. An entry must contain at least one author element unless there is an author element in the enclosing feed, or there is an author element in the enclosed source element.
+ * PgMdAtomPerson array. A feed or entry may have multiple author elements. A feed must contain at least one author element unless all of the entry elements contain at least one author element. An entry must contain at least one author element unless there is an author element in the enclosing feed, or there is an author element in the enclosed source element.
  */
 @property NSArray *authors;
 
