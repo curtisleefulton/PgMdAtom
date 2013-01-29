@@ -14,7 +14,7 @@
 @interface PgMdAtomFeed : PgMdAtomSource
 
 /**
- * feed may have any number of entries
+ * PgMdAtomEntry array. A feed may have any number of entries
  */
 @property NSArray *entries;
 

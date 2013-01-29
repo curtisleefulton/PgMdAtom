@@ -36,7 +36,7 @@
     STAssertNil(atomBase.updated, @"updated nil");
     STAssertNil(atomBase.categories, @"categories nil");
     STAssertNil(atomBase.rights, @"rights nil");
-    STAssertNil(atomBase.author, @"author nil");
+    STAssertNil(atomBase.authors, @"author nil");
     STAssertNil(atomBase.contributors, @"contributor nil");
     STAssertNil(atomBase.links, @"contributor nil");
 }
@@ -60,7 +60,8 @@
     STAssertNotNil(atomBase.categories, @"categories nil");
     STAssertEquals(0, (int)[atomBase.categories count], @"categories count");
     STAssertNil(atomBase.rights, @"rights nil");
-    STAssertNil(atomBase.author, @"author nil");
+    STAssertNotNil(atomBase.authors, @"author not nil");
+    STAssertEquals(0, (int)[atomBase.authors count], @"authors count");
     STAssertNotNil(atomBase.contributors, @"contributor nil");
     STAssertEquals(0, (int)[atomBase.contributors count], @"contributors count");
     STAssertNotNil(atomBase.links, @"contributor nil");
@@ -117,16 +118,17 @@
     [entryElement accept:visitor];
     
     
-    STAssertNotNil(atomBase.atomId, @"id nil");
-    STAssertNotNil(atomBase.title, @"title nil");
-    STAssertNotNil(atomBase.updated, @"updated nil");
-    STAssertNotNil(atomBase.categories, @"categories nil");
+    STAssertNotNil(atomBase.atomId, @"id not nil");
+    STAssertNotNil(atomBase.title, @"title not nil");
+    STAssertNotNil(atomBase.updated, @"updated not nil");
+    STAssertNotNil(atomBase.categories, @"categories not nil");
     STAssertEquals(1, (int)[atomBase.categories count], @"categories count");
-    STAssertNotNil(atomBase.rights, @"rights nil");
-    STAssertNotNil(atomBase.author, @"author nil");
-    STAssertNotNil(atomBase.contributors, @"contributor nil");
+    STAssertNotNil(atomBase.rights, @"rights not nil");
+    STAssertNotNil(atomBase.authors, @"author not nil");
+    STAssertEquals(1, (int)[atomBase.authors count], @"authors count");
+    STAssertNotNil(atomBase.contributors, @"contributor not nil");
     STAssertEquals(1, (int)[atomBase.contributors count], @"contributors count");
-    STAssertNotNil(atomBase.links, @"contributor nil");
+    STAssertNotNil(atomBase.links, @"contributor not nil");
     STAssertEquals(1, (int)[atomBase.links count], @"links count");
 }
 

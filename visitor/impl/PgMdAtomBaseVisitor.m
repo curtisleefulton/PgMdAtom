@@ -35,6 +35,7 @@
 {
     NSMutableArray *categories = [[NSMutableArray alloc]init];
     NSMutableArray *contributors = [[NSMutableArray alloc]init];
+    NSMutableArray *authors = [[NSMutableArray alloc]init];
     NSMutableArray *links = [[NSMutableArray alloc]init];
 
 
@@ -65,8 +66,8 @@
             
             [child accept:visitor];
             
-            _atomBase.author = author;
-            
+            [authors addObject:author];
+                        
             continue;
         }
         
@@ -174,6 +175,7 @@
     }
     
     _atomBase.categories = categories;
+    _atomBase.authors = authors;
     _atomBase.contributors = contributors;
     _atomBase.links = links;
     

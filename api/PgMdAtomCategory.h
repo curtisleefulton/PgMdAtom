@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- * Atom category model properties.
+ * Specifies a category that the feed or entry belong to.
  */
 @interface PgMdAtomCategory : NSObject
 
