@@ -1,6 +1,6 @@
 SYNOPSIS
 
-docs at https://pagemeld.com/PgMdAtom
+docs at https://pagemeld.com/code/PgMdAtom
 
 ```
 #import "PgMdAtom.h"
