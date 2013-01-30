@@ -10,19 +10,21 @@
 #import "PgMdAtomParserDefaultImpl.h"
 
 /**
- *  PageMeld default Atom parser factory. Atom is the name of an XML-based Web content and metadata syndication format, and an application-level protocol for publishing and editing Web resources belonging to periodically updated websites.
+ * PageMeld default Atom parser factory. Atom is the name of an XML-based Web content and metadata syndication format, and an application-level protocol for publishing and editing Web resources belonging to periodically updated websites.
  *
  * SYNOPSIS
  *
- *     #import "PgMdAtom.h"
+ * <pre>
+ * #import "PgMdAtom.h"
+ *
+ * id<PgMdAtomParser> atomParser = [PgMdAtom getParser];
+ * 
+ * NSString *locale = @"en_US";
+ * NSData *xml = [@"<feed/>" dataUsingEncoding:NSUTF8StringEncoding];
+ * NSError *error;
  *     
- *     id<PgMdAtomParser> atomParser = [PgMdAtom getParser];
- *     
- *     NSString *locale = @"en_US";
- *     NSData *xml = [@"<feed/>" dataUsingEncoding:NSUTF8StringEncoding];
- *     NSError *error;
- *     
- *     PgMdAtomFeed *feed = [atomParser parse:locale:xml:&error];
+ * PgMdAtomFeed *feed = [atomParser parse:locale:xml:&error];
+ * </pre>
  */
 @interface PgMdAtom : NSObject
 
