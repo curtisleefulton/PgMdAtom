@@ -53,6 +53,10 @@
 }
 
 
+- (void)visitCData:(id <PgMdAtomNode>)cdataNode
+{
+    [self visitText:cdataNode];
 
+}
 
 @end

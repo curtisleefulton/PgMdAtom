@@ -11,6 +11,7 @@
 #import "PgMdAtomParserAttributeImpl.h"
 #import "PgMdAtomParserTextImpl.h"
 #import "PgMdAtomParserElementImpl.h"
+#import "PgMdAtomParserCDataImpl.h"
 
 @implementation PgMdAtomCoreParser
 {
@@ -89,6 +90,17 @@
     PgMdAtomParserTextImpl *textNode = [[PgMdAtomParserTextImpl alloc]init];
     [textNode setNodeValue:string];
     [_currentElement addChildNode:textNode];
+}
+
+- (void)parser:(NSXMLParser *)parser foundCDATA:(NSData *)CDATABlock
+{
+    PgMdAtomParserCDataImpl *cdataNode = [[PgMdAtomParserCDataImpl alloc] init];
+    NSString *v = [[NSString alloc] initWithData:CDATABlock encoding:NSUTF8StringEncoding];
+    [cdataNode setNodeValue: v];
+    [_currentElement addChildNode:cdataNode];
+
+
+
 }
 
 - (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError

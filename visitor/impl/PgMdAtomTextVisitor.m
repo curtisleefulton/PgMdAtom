@@ -71,6 +71,11 @@
     
 }
 
+- (void)visitCData:(id <PgMdAtomNode>)cdataNode
+{
+
+}
+
 - (void) dealloc
 {
     _textCoreVisitor = nil;

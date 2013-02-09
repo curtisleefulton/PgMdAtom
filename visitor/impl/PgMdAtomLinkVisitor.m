@@ -94,7 +94,10 @@
     
 }
 
+- (void)visitCData:(id <PgMdAtomNode>)cdataNode
+{
 
+}
 
 
 @end

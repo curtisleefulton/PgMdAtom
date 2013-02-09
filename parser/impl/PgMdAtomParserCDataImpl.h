@@ -5,8 +5,8 @@
 //
 
 
-#import <Foundation/Foundation.h>
+#import "PgMdAtomParserNodeImpl.h"
 
 
-@interface PgMdAtomParserCDataImpl : NSObject
+@interface PgMdAtomParserCDataImpl : PgMdAtomParserNodeImpl
 @end

@@ -35,7 +35,7 @@
 {
     PgMdAtomCoreParser *coreParser = [[PgMdAtomCoreParser alloc]init];
     
-    NSString* xmlString = @"<xml><id>urn:pagemeld:root</id><title>hello</title><updated>2003-12-13T18:30:02Z</updated><category scheme=\"urn:pagemeld:feed:type\" term=\"index\" label=\"label\"/><entry><id>urn:pagemeld:entry</id><updated>2002-10-13T18:30:02Z</updated><summary type=\"html\">summary <b>markup</b></summary><link href=\"urn:entry:link\"/><content type=\"html\">content string</content><title>entryTitle</title><category scheme=\"urn:pagemeld:entry:type\" term=\"term\" label=\"label\"/>/></entry><entry><content><div style=\"color:red\"><br/><p style=\"color:blue\" class=\"className\">hello<b>world</b><span>HELLO<i>WORLD</i></span></p></div></content></entry></xml>";
+    NSString* xmlString = @"<xml><id>urn:pagemeld:root</id><title><![CDATA[hello]]></title><updated>2003-12-13T18:30:02Z</updated><category scheme=\"urn:pagemeld:feed:type\" term=\"index\" label=\"label\"/><entry><id>urn:pagemeld:entry</id><updated>2002-10-13T18:30:02Z</updated><summary type=\"html\">summary <b>markup</b></summary><link href=\"urn:entry:link\"/><content type=\"html\">content string</content><title>entryTitle</title><category scheme=\"urn:pagemeld:entry:type\" term=\"term\" label=\"label\"/>/></entry><entry><content><div style=\"color:red\"><br/><p style=\"color:blue\" class=\"className\">hello<b>world</b><span>HELLO<i>WORLD</i></span></p></div></content></entry></xml>";
     NSData *xmlData  = [xmlString dataUsingEncoding:NSUTF8StringEncoding];
     
     NSError *error = nil;
@@ -61,6 +61,8 @@
 
     
     STAssertEqualObjects(@"hello", feed.title.text, @"");
+    STAssertEqualObjects(@"<title><![CDATA[hello]]></title>", feed.title.markup, @"");
+
     STAssertEqualObjects([[NSURL alloc]initWithString:@"urn:pagemeld:root"], feed.atomId, @"");
     
     int c = [feed.entries count];

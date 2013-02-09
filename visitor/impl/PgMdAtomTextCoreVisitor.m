@@ -87,7 +87,13 @@
 }
 
 
-
+- (void)visitCData:(id <PgMdAtomNode>)cdataNode
+{
+    [_text addObject:[cdataNode getNodeValue]];
+    [_markup addObject:@"<![CDATA["];
+    [_markup addObject:[cdataNode getNodeValue]];
+    [_markup addObject:@"]]>"];
+}
 
 
 @end

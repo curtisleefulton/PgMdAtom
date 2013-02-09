@@ -201,6 +201,11 @@
 {
 }
 
+- (void)visitCData:(id <PgMdAtomNode>)cdataNode
+{
+
+}
+
 
 - (void) dealloc
 {

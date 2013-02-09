@@ -6,10 +6,17 @@
 
 
 #import "PgMdAtomParserCDataImpl.h"
+#import "PgMdAtomNodeVisitor.h"
+
+@implementation PgMdAtomParserCDataImpl
 
 
-@implementation PgMdAtomParserCDataImpl {
+- (void)accept:(id <PgMdAtomNodeVisitor>)visitor
+{
+    [super accept:visitor];
+    [visitor visitCData:self];
 
 }
+
 
 @end

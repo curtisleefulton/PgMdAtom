@@ -15,6 +15,7 @@
 - (void)visitElementClose:(id<PgMdAtomNode>)elementNode;
 - (void)visitAttribute:(id<PgMdAtomNode>)attributeNode;
 - (void)visitText:(id<PgMdAtomNode>)textNode;
+- (void)visitCData:(id<PgMdAtomNode>)textNode;
 
 
 
