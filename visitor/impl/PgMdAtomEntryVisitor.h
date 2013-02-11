@@ -13,6 +13,7 @@
 @interface PgMdAtomEntryVisitor : PgMdAtomBaseVisitor <PgMdAtomNodeVisitor>
 
 
+
 -(id)init:(NSString*)locale:(PgMdAtomEntry*)entry;
 
 @end

@@ -8,9 +8,7 @@
 
 #import "PgMdAtomFeedVisitorTest.h"
 #import "PgMdAtomFeedVisitor.h"
-#import "PgMdAtomFeed.h"
 #import "PgMdAtomParserElementImpl.h"
-#import "PgMdAtomParserTextImpl.h"
 
 @implementation PgMdAtomFeedVisitorTest
 

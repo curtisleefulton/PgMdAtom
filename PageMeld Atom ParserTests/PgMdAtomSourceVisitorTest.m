@@ -9,7 +9,6 @@
 #import "PgMdAtomSourceVisitorTest.h"
 #import "PgMdAtomSourceVisitor.h"
 #import "PgMdAtomParserElementImpl.h"
-#import "PgMdAtomParserTextImpl.h"
 
 @implementation PgMdAtomSourceVisitorTest
 

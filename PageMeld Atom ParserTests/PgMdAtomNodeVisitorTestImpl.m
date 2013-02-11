@@ -52,6 +52,12 @@
 
 }
 
+- (void)visitCData:(id <PgMdAtomNode>)textNode
+{
+    [_visits addObject:@"cdata"];
+}
+
+
 -(NSArray*)getVisits
 {
     return _visits;

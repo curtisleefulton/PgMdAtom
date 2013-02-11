@@ -9,8 +9,6 @@
 #import "PgMdAtomParserDefaultImpl.h"
 #import "PgMdAtomCoreParser.h"
 #import "PgMdAtomFeedVisitor.h"
-#import "PgMdAtomEntry.h"
-#import "PgMdAtomNode.h"
 
 @implementation PgMdAtomParserDefaultImpl
 

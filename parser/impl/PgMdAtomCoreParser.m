@@ -10,7 +10,6 @@
 #import "PgMdAtomParserElementImpl.h"
 #import "PgMdAtomParserAttributeImpl.h"
 #import "PgMdAtomParserTextImpl.h"
-#import "PgMdAtomParserElementImpl.h"
 #import "PgMdAtomParserCDataImpl.h"
 
 @implementation PgMdAtomCoreParser

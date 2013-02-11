@@ -8,7 +8,6 @@
 
 #import "PgMdAtomPersonVisitorTest.h"
 #import "PgMdAtomPersonVisitor.h"
-#import "PgMdAtomPerson.h"
 #import "PgMdAtomParserElementImpl.h"
 #import "PgMdAtomParserTextImpl.h"
 

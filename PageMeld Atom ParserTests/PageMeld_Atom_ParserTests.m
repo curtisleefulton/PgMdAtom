@@ -10,7 +10,6 @@
 #import "PgMdAtomCoreParser.h"
 #import "PgMdAtomFeedVisitor.h"
 #import "PgMdAtomEntry.h"
-#import "PgMdAtomNode.h"
 #import "PgMdAtomLink.h"
 #import "PgMdAtomCategory.h"
 
