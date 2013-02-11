@@ -7,6 +7,7 @@
 //
 
 #import "PgMdAtom.h"
+#import "PgMdAtomParserDefaultImpl.h"
 
 @implementation PgMdAtom
 

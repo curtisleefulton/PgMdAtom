@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PgMdAtomParserDefaultImpl.h"
+#import "PgMdAtomParser.h"
 
 /**
  * PageMeld default Atom parser factory. Atom is the name of an XML-based Web content and metadata syndication format, and an application-level protocol for publishing and editing Web resources belonging to periodically updated websites.
