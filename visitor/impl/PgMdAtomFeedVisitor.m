@@ -62,7 +62,6 @@
 
 -(void)dealloc
 {
-    [_entries removeAllObjects];
     _entries = nil;
 }
 
